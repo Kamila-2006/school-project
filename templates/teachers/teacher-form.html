@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher Create</title>
+</head>
+<body>
+    <h1>Teacher Create</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="first_name">First Name:</label><br>
+        <input type="text" id="first_name" name="first_name"><br>
+        <label for="last_name">Last Name:</label><br>
+        <input type="text" id="last_name" name="last_name"><br>
+        <label for="subject">Subject:</label><br>
+        <input type="text" id="subject" name="subject"><br><br>
+        <input type="submit" value="Create Teacher"><br><br>
+    </form>
+    <button><a href="{% url 'teachers:list' %}">Back To Teacher List</a></button>
+    <button><a href="{% url 'home' %}">Back Home</a></button>
+</body>
+</html>
